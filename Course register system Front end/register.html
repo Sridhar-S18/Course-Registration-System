@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Register a course</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #fff;
+      }
+
+      h2 {
+        text-align: center;
+        color: #f1c40f;
+        margin-bottom: 20px;
+      }
+
+      form {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        padding: 30px 40px;
+        width: 100%;
+        max-width: 450px;
+        box-sizing: border-box;
+        color: #2c3e50;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        background-color: #27ae60;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #1e8449;
+        transform: scale(1.03);
+      }
+
+      @media (max-width: 500px) {
+        form {
+          padding: 25px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="http://localhost:8080/course/register" method="post">
+      <h2>Start Your New Skill</h2>
+
+      <label for="name">Enter your Name</label>
+      <input type="text" name="name" required />
+
+      <label for="email">Enter your Email</label>
+      <input type="email" name="emailId" required />
+
+      <label for="course">Choose a Course</label>
+      <select id="course" name="courseName" required>
+        <option value="">-- Select a Course --</option>
+        <option value="Java Essentials">Java Essentials</option>
+        <option value="Python for ML">Python for ML</option>
+        <option value="Spring Boot">Spring Boot</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
